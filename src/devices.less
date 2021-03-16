@@ -1,0 +1,30 @@
+.devices {
+  padding-top: 80px;
+  &__wrapper {
+    display: flex;
+  }
+  &__info {
+    margin: 110px 0 0 65px;
+    &_title {
+      .title;
+    }
+    &_text {
+      .text;
+      margin: 20px 0 50px;
+    }
+  }
+  &__list {
+    margin: 50px 0 0 130px;
+    &_item {
+      .text;
+      display: flex;
+      align-items: center;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+    &_circle {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.services {
+  padding: 90px 0;
+  &__wrapper {
+    display: flex;
+  }
+  &__item {
+    text-align: center;
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+    &:hover .services__info_title {
+      color: @hoverColor;
+    }
+    &:hover .services__info_text::after {
+      border-bottom: @hoverColor 3px solid;
+    }
+    &:hover .services__image {
+      fill: @hoverColor;
+    }
+  }
+
+  &__info {
+    &_title {
+      .title(@fz: 22px);
+      padding: 30px 0;
+    }
+    &_text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+
+      &::after {
+        display: block;
+        content: "";
+        width: 70px;
+        border-bottom: #f1eee9 3px solid;
+        padding-top: 30px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

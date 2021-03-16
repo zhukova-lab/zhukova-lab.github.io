@@ -1,0 +1,82 @@
+.recent {
+  padding: 100px 0 40px;
+  &__content {
+    display: flex;
+  }
+  &__title {
+.title;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__text {
+    .text(@lh: 1.6);
+    width: 65%;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  &__item {
+    position: relative;
+    background: black;
+    &:hover .recent__item_image {
+      opacity: 0.5;
+    }
+    &:hover .recent__calendar_top {
+      fill: #c7b199;
+    }
+    &:hover .recent__calendar_bottom {
+      fill: #a48d71;
+    }
+    &:hover .recent__info {
+      background: #352f2d;
+      border: 2px solid #352f2d;
+    }
+    &:hover .recent__info_title {
+      color: @hoverColor;
+    }
+    &:hover .recent__info_text {
+      color: #ffffff;
+    }
+    &:not(:last-of-type) {
+      margin-right: 85px;
+    }
+    &_calendar {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+    }
+    &_image {
+      max-height: 220px;
+      width: 100%;
+    }
+  }
+  &__info {
+    background: #ffffff;
+    padding: 30px 20px 20px;
+    border: 2px solid #e5e5e5;
+    &_title {
+      .title(@fw: 500, @fz: 20px, @lh: 1.1);
+    }
+    &_text {
+   .text(@color: #000000, @fz: 16px);
+      padding: 20px 0;
+    }
+    &_link {
+      color: @hoverColor;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  &__pagination {
+    margin-top: 55px;
+    text-align: center;
+    &_item {
+      &:hover {
+        fill: @hoverColor;
+      }
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+}

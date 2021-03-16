@@ -1,0 +1,509 @@
+@media screen and (max-width: 1200px) {
+.container{
+  max-width: 960px;
+  }
+.header{
+  &__hamburger_btn {
+    display: flex; 
+    align-items: center;  
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  
+      & > span,
+      & > span::before,
+      & > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+      & > span::before {
+    content: '';
+    top: -8px;
+  }
+      & > span::after {
+    content: '';
+    top: 8px;
+  }
+  }
+  &__nav {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    width: 300px;
+    height: 50%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #988574;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+      &_link {
+    display: block;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+      &:hover {
+    background-color: #CFD8DC;
+  }
+  }
+  }
+}
+#header__toggle {
+    &:checked ~ .header__hamburger_btn > span {
+    transform: rotate(45deg);
+}
+    &:checked ~ .header__hamburger_btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+    &:checked ~ .header__hamburger_btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+    &:checked ~ .header__nav {
+    visibility: visible;
+    right: 220px;
+}
+}
+.purchase{
+  padding: 45px;
+}
+.projects{
+    &__content{
+    justify-content: space-evenly;
+}
+    &__item{
+    &:not(:last-of-type),
+    &:nth-child(-n + 3),
+    &:nth-child(-n + 3){
+    margin: 0;
+ }
+}
+}
+.recent{
+  &__item{
+    width: 30%;
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+  }
+  &__info{
+    &_title{
+      font-size: 18px;
+    }
+    &_text{
+      font-size: 16px;
+    }
+  }
+}
+.footer{
+  padding-top: 35px;
+  &__widget_image{
+    width: 90px;
+  }
+}
+}
+
+@media screen and (max-width: 992px) {
+ .container{
+   max-width: 750px;
+ }
+ .header{
+   &__info{
+     margin: 200px 0;
+     &_subtitle{
+      font-size: 30px;  
+     }
+     &_title{
+      font-size: 43px;
+     }
+     &_text{
+       font-size: 14px;
+       width: 60%;
+     }
+   }
+ }
+ .services{
+    &__wrapper{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+     &__item{
+     width: 35%;
+       &:not(:last-of-type) {
+     margin-right: 0; 
+}
+ }
+}
+.recent{
+    &__info{
+      padding: 20px 10px 10px;
+      &_title{
+        font-size: 15px;
+      }
+    &_text {
+    font-size: 12px;
+}
+    }
+}
+.footer{
+  &__title{
+    font-size: 18px;
+  }
+  &__widget{
+  &_images{
+    justify-content: center;
+  }
+  &_image:nth-of-type(2n + 1) {
+    margin-right: 0;
+    &:nth-of-type(3){
+      margin-bottom: 10px;
+    }
+}
+  }
+}
+}
+
+@media screen and (max-width: 768px) {
+.container{
+  max-width: 520px;
+}
+.header{
+  &__slider{
+    width: 20px;
+  }
+  &__info{
+    margin: 70px 0;
+      &_subtitle{
+      font-size: 20px;
+      padding-bottom: 10px;
+  }
+      &_title{
+      font-size: 30px;
+      padding-bottom: 10px;
+  }
+      &_text{
+      width: 80%;
+      font-size: 12px;
+  }
+      &_button{
+      padding: 15px 25px;
+      font-size: 12px;
+  }
+}
+}
+.services{
+  &__wrapper{
+    justify-content: space-between;
+  }
+  &__item{
+    width: 45%;
+  }
+  &__info{
+    &_title{
+      font-size: 20px;
+    }
+  }
+}
+.waxom{
+  &__title{
+    font-size: 26px;
+  }
+  &__text{
+    font-size: 14px;
+    width: 100%;
+  }
+}
+.purchase{
+  &__info{
+    &_title{
+      font-size: 18px;
+    }
+    &_text{
+      font-size: 14px;
+    }
+  }
+  &__button{
+    padding: 10px 25px;
+    font-size: 10px;
+  }
+}
+.projects{
+  &__info{
+    &_title{
+      font-size: 24px;
+    }
+    &_text{
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+  &__nav{
+    &_button{
+      padding: 5px 15px;
+    &:not(:last-of-type) {
+      margin-right: 5px;
+  }
+}
+}
+}
+.presentation{
+  &__info{
+    &_play{
+      width: 50px;
+      height: 50px;
+    }
+    &_title{
+      font-size: 20px;
+    }
+    &_text{
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}
+.devices{
+  padding-bottom: 50px;
+  &__image{
+    display: none;
+  }
+  &__info{
+    margin: 0;
+    &_title{
+      font-size: 24px;
+    }
+  }
+  &__list{
+    margin: 0;
+  }
+}
+.counters{
+  &__item{
+    &_image{
+      width: 33px;
+      height: 33px;
+    }
+
+  }
+  &__info{
+    &_title{
+      font-size: 30px;
+    }
+  }
+}
+.recent{
+  padding-top: 50px;
+  &__title{
+    font-size: 24px;
+  }
+  &__text{
+    font-size: 14px;
+    width: 100%;
+  }
+  &__item{
+    &_calendar{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+.partners{
+  padding: 60px 0;
+  &__wrapper{
+    flex-wrap: wrap;
+  }
+  &__image{
+    width: 30%;
+    &:not(:last-of-type){
+      margin-right: 20px;
+    }
+    &:first-of-type,
+    &:nth-of-type(2){
+      margin-bottom: 20px;
+    }
+  }
+}
+.footer{
+  &__wrapper{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 40%;
+    &:not(:last-of-type) {
+      margin-right: 0;
+    }
+      &_logo{
+        width: 100px;
+      }
+  
+  }
+  &__widget{
+    &_image{
+      &:last-of-type{
+        margin-bottom: 10px;
+      }
+      &:first-of-type,
+      &:nth-of-type(3){
+        margin-right: 10px;
+      }
+    }
+  }
+  &__copy{
+    margin-top: 50px;
+  }
+}
+}
+@media screen and (max-width: 576px){
+.container{
+  max-width: 320px;
+}
+.header{
+  &__nav_logo{
+    width: 50%;
+  }
+  &__hamburger_btn{
+    top: 10%;
+  }
+  &__info{
+    margin: 35px 0;
+    &_subtitle{
+      font-size: 16px;
+    }
+    &_title{
+      font-size: 22px;
+    }
+    &_button{
+      font-size: 10px;
+    }
+   
+  }
+}
+.services{
+  &__wrapper{
+    display: block;
+  }
+  &__item{
+    width: 100%;
+  }
+}
+.waxom{
+  &__title{
+    font-size: 20px;
+  }
+}
+.purchase{
+  &__wrapper{
+    display: block;
+    text-align: center;
+  }
+  &__info_text{
+    padding: 10px 0;
+  }
+}
+.projects{
+  &__info{
+    &_title{
+    font-size: 20px;
+  }
+&_text{
+  font-size: 12px;
+}
+
+}
+&__nav{
+  margin-bottom: 30px;
+  display: flex;
+}
+}
+.presentation{
+  &__info{
+    top: 25%;
+    &_title{
+      margin: 10px 0;
+    }
+    &_text{
+      font-size: 12px;
+    }
+  }
+}
+.devices{
+  padding: 30px 0;
+  &__info{
+    &_title{
+    font-size: 20px;
+  }
+}
+  &__list{
+    &_item{
+      font-size: 12px;
+    }
+    &_circle{
+      flex-shrink: 0;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+}
+.counters{
+  &__item{
+    width: 90px;
+    &_image{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__info{
+    &_title{
+      font-size: 20px;
+      &::after {
+        border-bottom: 2px solid #ffffff;
+        width: 30px;
+        margin: 0 auto;
+        display: block;
+        content: "";
+        padding-top: 15px;
+      }
+    }
+    &_text{
+      display: none;
+     
+    }
+  }
+}
+.recent{
+  &__title{
+    font-size: 20px;
+  }
+  &__text{
+    font-size: 12px;
+  }
+  &__content{
+    display: block;
+  }
+  &__item{
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.footer{
+  &__title{
+    font-size: 16px;
+  }
+  &__widget_image{
+  margin-right: 0 !important;
+  }
+}
+}

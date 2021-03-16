@@ -1,0 +1,23 @@
+.purchase {
+  background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211b19 0%, #4e3326 100%);
+  padding: 45px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    &_title {
+      .title(@hoverColor, normal, 28px, 1.2);
+    }
+    &_text {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.1;
+      color: #615855;
+      padding-top: 5px;
+    }
+  }
+  &__button {
+    .button;
+  }
+}
